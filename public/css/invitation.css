@@ -1,0 +1,66 @@
+.container{
+    background-color: white;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+i{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.message{
+    background-color: lightskyblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 51%;
+    margin: 20px auto;
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.1);
+    transition: 0.3s width ease;
+}
+
+.date{
+    background-color: hotpink;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 51%;
+    margin: 20px auto;
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.1);
+    transition: 0.3s width ease;
+}
+
+.organizer{
+    background-color: rgb(105, 255, 173);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 51%;
+    margin: 20px auto;
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.1);
+    transition: 0.3s width ease;
+}
+
+.message:hover, .date:hover, .organizer:hover{
+    width: 75%;
+    cursor: pointer;
+}
+
+.join{
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 20%;
+    cursor: pointer;
+    transition: 0.2s background-color ease;
+}
+
+.join:hover{
+    background-color: rgb(196, 62, 62);
+}

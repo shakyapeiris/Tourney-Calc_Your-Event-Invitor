@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+
+button.add{
+    background-color: maroon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: larger;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    cursor: pointer;
+    transition: 0.2s background-color ease;
+}
+
+button.add:hover{
+    background-color: rgb(192, 6, 0);
+}
+
+body{
+    background-color: lightskyblue;
+}
+
+h1{
+    font-family: 'Indie Flower', cursive;
+}
+
+.box{
+    background: rgb(255, 140, 68);
+    width: 60%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: rgb(3, 131, 250);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s background-color ease;
+}
+
+a:hover{
+    background-color: rgb(159, 107, 255);
+    color: white;
+}
+
+a:last-child{
+    background-color: maroon;
+    color: white;
+}
+
+a:last-child:hover{
+    background-color: rgb(0, 255, 106);
+    color: white;
+}

@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/form.css")
+        link(rel="shortcut icon", href="https://icon-library.com/images/event_icon_png_454157_47387.png", type="image/x-icon")
+        title Add Event
+    body 
+        form(action="/admin/add-event-complete", method="post") 
+            h1 Add an Event
+
+            label(for="title") Title:  
+            input(type="text" id="title" name="title")
+
+            label(for="description") Description
+            textarea(name="description", rows="10") 
+
+            label(for="host") Host(Person/ Organization):
+            input(name="host", type="text", id="host")
+
+            label(for="time") Host(Person/ Organization):
+            input(name="time", type="datetime-local", id="time")
+
+            label(for="server") Link(If a game tournament server id/link):
+            input(name="server", type="text", id="server")  
+
+            label(for="banner") Banner Link(Background Image):
+            input(name="banner", type="text", id="banner")
+
+            label(for="video") Video Link(Youtube):
+            input(name="video", type="text", id="video")
+
+            label(for="facebook") FaceBoook Page:
+            input(name="facebook", type="text", id="facebook")
+
+            label(for="instagram") Instagram Page:
+            input(name="instagram", type="text", id="instagram")
+
+            input(type="hidden", name="userId", value=id)
+
+            button(type="submit") Add Event

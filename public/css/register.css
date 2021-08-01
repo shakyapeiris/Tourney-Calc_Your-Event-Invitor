@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+
+
+body{
+    background-color: lightskyblue;
+}
+
+.box{
+    width: 60%;
+    background: rgb(255, 140, 68);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+p, h1{
+    text-align: center;
+}
+
+h1{
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.token{
+    font-family: 'Georama', sans-serif;
+    font-size: 3rem;
+}
+
+form button.add{
+    background-color: hotpink;
+}

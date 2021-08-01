@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/dsh.css")
+        link(rel="shortcut icon", href="https://icon-library.com/images/event_icon_png_454157_47387.png", type="image/x-icon")
+        title Dashboard 
+    body 
+        if userEvents.length <= 0
+            h1 Can't find any events! 
+        else 
+            each event in userEvents 
+                div(class="box")
+                    h1 #{event.title}
+                    a(href="/admin/" + userId +  "/edit-event/" + event._id) Edit
+                    
+                    a(href="/admin/" + userId +  "/delete-event/" + event._id) Delete 
+                     
+                    a(href="/events/" + event._id + "?reciever=reciever", target="_blank") Share 
+                    
+        
+        form(action="/admin/add-event", method="POST")
+            input(type="hidden", name="userId", value=(userId)) 
+            button(type="submit", class="add") +

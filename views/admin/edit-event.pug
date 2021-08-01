@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/form.css")
+        link(rel="shortcut icon", href="https://icon-library.com/images/event_icon_png_454157_47387.png", type="image/x-icon")
+        title Edit Event
+    body 
+        form(action="/admin/edit-event", method="post") 
+            h1 Edit 
+
+            label(for="title") Title:  
+            input(type="text", id="title", name="title", value=eventDetails.title)
+
+            label(for="description") Description
+            textarea(name="description", rows="10") #{eventDetails.description}
+
+            label(for="host") Host(Person/ Organization):
+            input(name="host", type="text", id="host", value=eventDetails.host)
+
+            label(for="time") Date :
+            input(name="time", type="datetime-local", id="time", value=eventDetails.time)
+
+            label(for="server") Link(If a game tournament server id/link):
+            input(name="server", type="text", id="server", value=eventDetails.server)  
+
+            label(for="banner") Banner Link(Background Image):
+            input(name="banner", type="text", id="banner", value=eventDetails.banner)
+
+            label(for="video") Video Link(Youtube):
+            input(name="video", type="text", id="video", value=eventDetails.video)
+
+            label(for="facebook") FaceBoook Page:
+            input(name="facebook", type="text", id="facebook", value=eventDetails.facebook)
+
+            label(for="instagram") Instagram Page:
+            input(name="instagram", type="text", id="instagram", value=eventDetails.instagram)
+
+            input(type="hidden", name="userId", value=user)
+            input(type="hidden", name="eventId", value=eventDetails._id)
+
+            button(type="submit") Update

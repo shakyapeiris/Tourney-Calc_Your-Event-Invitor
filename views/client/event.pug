@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href=details.banner, type="image/x-icon")
+        link(rel="shortcut icon", href="https://icon-library.com/images/event_icon_png_454157_47387.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/invitation.css")
+        title #{details.title}
+    body(style="background-image:url(" + details.banner + "); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;")
+        div(class="container")
+            h1 #{details.title}
+            if details.video.trim() != ""
+                iframe(width="560" height="315" src="https://www.youtube.com/embed/"+details.video, title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+            h3(class="organizer") Organized by, #{details.host}
+            p(class="date") On: #{new Date(details.time)}
+            div(class="message")
+                h3 Dear #{to},
+                p #{details.description}
+
+            if (details.server.includes('http'))
+                a(href=details.server, class="join") Join 
+            else 
+                p(class="join") Join us on #{details.server}
+            div(style="margin-top:30px;")
+                if details.facebook.trim() != ""
+                    a(href=details.facebook)
+                        i(class="fab fa-facebook")
+                if details.instagram.trim() != ""
+                    a(href=details.instagram)
+                        i(class="fab fa-instagram", style="color: hotpink;")
+
+
+                
+
+        <script src="https://kit.fontawesome.com/d5da95cea5.js" crossorigin="anonymous"></script>

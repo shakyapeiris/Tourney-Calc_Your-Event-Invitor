@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Add Event</title>
+  </head>
+  <body> 
+    <form action="/admin/add-event-complete" method="post"> 
+      <h1>Add an Event</h1>
+      <label for="title">Title:  </label>
+      <input type="text" id="title" name="title">
+      <label for="description">Description</label>
+      <textarea name="description" rows="10"> </textarea>
+      <label for="host">Host(Person/ Organization):</label>
+      <input name="host" type="text" id="host">
+      <label for="time">Date :</label>
+      <input name="time" type="datetime-local" id="time">
+      <label for="server">Link(If a game tournament server id/link):</label>
+      <input name="server" type="text" id="server">
+      <label for="banner">Banner Link(Background Image):</label>
+      <input name="banner" type="text" id="banner">
+      <label for="video">Video Link(Youtube):</label>
+      <input name="video" type="text" id="video">
+      <label for="facebook">FaceBoook Page:</label>
+      <input name="facebook" type="text" id="facebook">
+      <label for="instagram">Instagram Page:</label>
+      <input name="instagram" type="text" id="instagram">
+      <input type="hidden" name="userId">
+      <button type="submit">Add Event</button>
+    </form>
+  </body>
+</html>
